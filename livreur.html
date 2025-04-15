@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Livreurs</title>
+    <link rel="stylesheet" href="livreur-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Tableau de Bord - Livreurs</h1>
+        <nav>
+            <ul>
+                <li><a href="livreur.html">Commandes</a></li>
+                <li><a href="#">Historique</a></li>
+                <li><a href="#">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h2>Commandes en cours</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Client</th>
+                    <th>Adresse</th>
+                    <th>Statut</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#101</td>
+                    <td>Jean Dupont</td>
+                    <td>12 Rue des Fleurs</td>
+                    <td><span class="status pending">En attente</span></td>
+                    <td><button class="btn-deliver">Marquer comme Livrée</button></td>
+                </tr>
+                <tr>
+                    <td>#102</td>
+                    <td>Marie Curie</td>
+                    <td>45 Avenue de la Paix</td>
+                    <td><span class="status ongoing">En cours</span></td>
+                    <td><button class="btn-deliver">Marquer comme Livrée</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Foodio - Interface Livreurs</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.btn-deliver').forEach(button => {
+            button.addEventListener('click', function() {
+                let row = this.closest('tr');
+                row.querySelector('.status').classList.remove('pending', 'ongoing');
+                row.querySelector('.status').classList.add('delivered');
+                row.querySelector('.status').textContent = "Livrée";
+                this.remove();
+            });
+        });
+    </script>
+</body>
+</html>

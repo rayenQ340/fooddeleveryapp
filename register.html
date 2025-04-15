@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inscription - Foodio</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Header -->
+<div class="nav">
+    <div class="logo">
+        <h1>Food<b>io</b></h1>
+    </div>
+    <div class="auth-buttons">
+        <a href="index.html" class="login-btn">Se connecter</a>
+    </div>
+</div>
+
+<!-- Formulaire -->
+<div class="auth-container">
+    <div class="auth-card">
+        <h2><i class='bx bx-user-plus'></i> Créer un compte</h2>
+
+        <form action="register.php" method="POST" enctype="multipart/form-data" class="form-split">
+
+            <!-- ✅ Groupe de rôle à l'intérieur du formulaire -->
+            <div class="form-group role-group">
+                <label>Je m'inscris en tant que :</label>
+                <div class="role-selector">
+                    <input type="radio" id="register-client" name="role" value="client" checked />
+                    <label for="register-client" class="role-btn">
+                        <i class='bx bx-user'></i> Client
+                    </label>
+
+                    <input type="radio" id="register-restaurant" name="role" value="restaurant" />
+                    <label for="register-restaurant" class="role-btn">
+                        <i class='bx bx-restaurant'></i> Restaurant
+                    </label>
+
+                    <input type="radio" id="register-livreur" name="role" value="livreur" />
+                    <label for="register-livreur" class="role-btn">
+                        <i class='bx bx-bike'></i> Livreur
+                    </label>
+                </div>
+            </div>
+
+            <!-- Colonne gauche -->
+            <div class="form-card">
+                <div class="form-group">
+                    <label for="nom"><i class='bx bx-user'></i> Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom"><i class='bx bx-user'></i> Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class='bx bx-envelope'></i> Email</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><i class='bx bx-lock-alt'></i> Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required />
+                </div>
+            </div>
+
+            <!-- Colonne droite -->
+            <div class="form-card">
+                <div class="form-group">
+                    <label for="confirm_password"><i class='bx bx-lock-alt'></i> Confirmer le mot de passe</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="••••••••" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse"><i class='bx bx-home'></i> Adresse</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Votre adresse" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone"><i class='bx bx-phone'></i> Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="0123456789" required />
+                </div>
+
+                <div class="form-group" id="vehicule-group" style="display: none;">
+                    <label for="vehicule"><i class='bx bx-bike'></i> Véhicule</label>
+                    <select id="vehicule" name="vehicule">
+                        <option value="Vélo">Vélo</option>
+                        <option value="Scooter">Scooter</option>
+                        <option value="Voiture">Voiture</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="image-group" style="display: none;">
+                    <label for="image"><i class='bx bx-image'></i> Image du Restaurant</label>
+                    <input type="file" id="image" name="image" accept="image/*" />
+                </div>
+            </div>
+
+            <!-- Bouton -->
+            <div class="form-button-container">
+                <button type="submit" class="btn-auth">
+                    <i class='bx bx-user-plus'></i> S'inscrire
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="logo">
+            <h1>Food<b>io</b></h1>
+        </div>
+        <div class="links">
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p>&copy; 2024 Foodio. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<!-- Script de gestion des champs dynamiques -->
+<script>
+    const radios = document.querySelectorAll('input[name="role"]');
+    const vehiculeGroup = document.getElementById('vehicule-group');
+    const imageGroup = document.getElementById('image-group');
+
+    function toggleFields(role) {
+        if (role === 'restaurant') {
+            vehiculeGroup.style.display = 'none';
+            imageGroup.style.display = 'block';
+        } else if (role === 'livreur') {
+            vehiculeGroup.style.display = 'block';
+            imageGroup.style.display = 'none';
+        } else {
+            vehiculeGroup.style.display = 'none';
+            imageGroup.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const selectedRole = document.querySelector('input[name="role"]:checked').value;
+        toggleFields(selectedRole);
+    });
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            toggleFields(this.value);
+        });
+    });
+</script>
+
+</body>
+</html>

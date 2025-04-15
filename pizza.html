@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pizza.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <title>Food Delivery App</title>
+</head>
+<body>
+    <!-- 🌟 Navbar -->
+    <section class="menu">
+        <div class="nav">
+            <div class="logo">
+                <h1>Food<b>io</b></h1>
+            </div>
+            <ul>
+                <li><a href="Accueil.php">Accueil</a></li>
+                <li><a href="menu.php">Restaurent</a></li>
+                <li><a href="service.php">Services</a></li>
+                <li><a href="about.php">À Propos</a></li>
+                <li><a href="livreur.html">liv</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <label for="signin-modal" class="signin-btn">Se Connecter</label>
+                <label for="signup-modal" class="signup-btn">S'inscrire</label>
+            </div>
+            <div class="cart-container">
+                <button class="cart-button">
+                    <i class="bx bx-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="cart-dropdown">
+                    <h4><i class="bx bx-cart"></i> Mon Panier</h4>
+                    <ul class="cart-items">
+                        <!-- Les éléments du panier seront ajoutés dynamiquement ici -->
+                    </ul>
+                    <div class="empty-cart-message">
+                        <div class="ux-mini-cart-empty-icon">🛒</div>
+                        Votre panier est vide
+                    </div>
+                    <div class="cart-total">
+                        <span>Total :</span> <span class="cart-total-price">0 dt</span>
+                    </div>
+                    <button class="passer-commande" style="display: none;">Passer la commande</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🍕 Section Pizzas -->
+    <section class="pizza-container">
+        <div class="pizza-item">
+            <img src="img/img5.jpg" alt="Pepperoni Pizza">
+            <h3>Pepperoni Pizza</h3>
+            <p>Classic pepperoni pizza avec extra fromage</p>
+            <div class="price-add">
+                <span class="price">18dt</span>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+        </div>
+
+        <div class="pizza-item">
+            <img src="img/img7.jpg" alt="Veggie Pizza">
+            <h3>Veggie Pizza</h3>
+            <p>Fresh veggies avec une base fromagère</p>
+            <div class="price-add">
+                <span class="price">16dt</span>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+        </div>
+
+        <div class="pizza-item">
+            <img src="img/img8.jpg" alt="Margherita Pizza">
+            <h3>Margherita Pizza</h3>
+            <p>Simple et frais, avec tomate et basilic</p>
+            <div class="price-add">
+                <span class="price">15dt</span>
+                <button class="add-to-cart">Ajouter</button>
+            </div>
+        </div>
+    </section>
+    <!-- 🍕 Section Pizzas -->
+<section class="pizza-container">
+    <!-- Pizza 1 -->
+    <div class="pizza-item">
+        <img src="img/img5.jpg" alt="Pepperoni Pizza">
+        <h3>Pepperoni Pizza</h3>
+        <p>Classic pepperoni pizza avec extra fromage</p>
+        <div class="price-add">
+            <span class="price">18dt</span>
+            <button class="add-to-cart">Ajouter</button>
+        </div>
+    </div>
+
+    <!-- Pizza 2 -->
+    <div class="pizza-item">
+        <img src="img/img7.jpg" alt="Veggie Pizza">
+        <h3>Veggie Pizza</h3>
+        <p>Fresh veggies avec une base fromagère</p>
+        <div class="price-add">
+            <span class="price">16dt</span>
+            <button class="add-to-cart">Ajouter</button>
+        </div>
+    </div>
+
+    <!-- Pizza 3 -->
+    <div class="pizza-item">
+        <img src="img/img8.jpg" alt="Margherita Pizza">
+        <h3>Margherita Pizza</h3>
+        <p>Simple et frais, avec tomate et basilic</p>
+        <div class="price-add">
+            <span class="price">15dt</span>
+            <button class="add-to-cart">Ajouter</button>
+        </div>
+    </div>
+
+    <!-- Nouvelle Pizza 4 -->
+    <div class="pizza-item">
+        <img src="img/img9.jpg" alt="4 Fromages Pizza">
+        <h3>4 Fromages Pizza</h3>
+        <p>Mozzarella, Gorgonzola, Parmesan, et Ricotta</p>
+        <div class="price-add">
+            <span class="price">20dt</span>
+            <button class="add-to-cart">Ajouter</button>
+        </div>
+    </div>
+
+    <!-- Nouvelle Pizza 5 -->
+    <div class="pizza-item">
+        <img src="img/img10.jpg" alt="Hawaïenne Pizza">
+        <h3>Hawaïenne Pizza</h3>
+        <p>Jambon, ananas, et fromage fondant</p>
+        <div class="price-add">
+            <span class="price">17dt</span>
+            <button class="add-to-cart">Ajouter</button>
+        </div>
+    </div>
+
+    <!-- Nouvelle Pizza 6 -->
+    <div class="pizza-item">
+        <img src="img/img11.jpg" alt="BBQ Chicken Pizza">
+        <h3>BBQ Chicken Pizza</h3>
+        <p>Poulet grillé, sauce BBQ, oignons rouges</p>
+        <div class="price-add">
+            <span class="price">19dt</span>
+            <button class="add-to-cart">Ajouter</button>
+        </div>
+    </div>
+</section>
+
+    <!-- 📌 Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <h1>Food<b>io</b></h1>
+            </div>
+            <div class="links">
+                <a href="Accueil.php">Accueil</a>
+                <a href="menu.php">Menu</a>
+                <a href="service.php">Services</a>
+                <a href="about.php">À Propos</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Foodio. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartButton = document.querySelector(".cart-button");
+            const cartDropdown = document.querySelector(".cart-dropdown");
+            const cartCount = document.querySelector(".cart-count");
+            const cartItemsContainer = document.querySelector(".cart-items");
+            const cartTotalPrice = document.querySelector(".cart-total-price");
+            const emptyCartMessage = document.querySelector(".empty-cart-message");
+            const passerCommandeButton = document.querySelector(".passer-commande"); // Bouton "Passer la commande"
+            let cart = [];
+
+            // Fonction pour mettre à jour l'affichage du panier
+            function updateCartDisplay() {
+                cartItemsContainer.innerHTML = ""; // Vider le contenu actuel du panier
+                let total = 0;
+
+                // Afficher ou masquer le message "Votre panier est vide" et le bouton "Passer la commande"
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = "block";
+                    passerCommandeButton.style.display = "none"; // Masquer le bouton
+                } else {
+                    emptyCartMessage.style.display = "none";
+                    passerCommandeButton.style.display = "block"; // Afficher le bouton
+                }
+
+                // Ajouter les articles au panier
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    const li = document.createElement("li");
+                    li.innerHTML = `
+                        <div class="cart-item">
+                            <span class="item-name">${item.name}</span>
+                            <span class="item-price">${item.price} dt</span>
+                            <button class="remove-item" data-index="${index}">X</button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(li);
+                });
+
+                // Mettre à jour le total et le nombre d'articles
+                cartTotalPrice.textContent = `${total} dt`;
+                cartCount.textContent = cart.length;
+            }
+
+            // Ajouter un article au panier
+            document.querySelectorAll(".add-to-cart").forEach((button) => {
+                button.addEventListener("click", function () {
+                    const parent = button.closest(".pizza-item");
+                    const name = parent.querySelector("h3").textContent;
+                    const price = parseFloat(parent.querySelector(".price").textContent);
+                    cart.push({ name, price });
+                    updateCartDisplay();
+                });
+            });
+
+            // Supprimer un article du panier
+            document.addEventListener("click", function (event) {
+                if (event.target.classList.contains("remove-item")) {
+                    const index = event.target.getAttribute("data-index");
+                    cart.splice(index, 1);
+                    updateCartDisplay();
+                }
+            });
+
+            // Afficher ou masquer le panier
+            cartButton.addEventListener("click", function (event) {
+                event.stopPropagation(); // Empêcher la propagation du clic
+                cartDropdown.classList.toggle("show");
+            });
+
+            // Masquer le panier lorsqu'on clique en dehors
+            document.addEventListener("click", function () {
+                cartDropdown.classList.remove("show");
+            });
+
+            // Empêcher la fermeture du panier lorsqu'on clique à l'intérieur
+            cartDropdown.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>

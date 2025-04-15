@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order-style.css">
+    <title>Order Form</title>
+</head>
+<body>
+    <section class="menu">
+        <div class="nav">
+            <div class="logo">
+                <h1>Food<b>io</b></h1>
+            </div>
+            <ul>
+                <li><a href="Accueil.php">Accueil</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="service.php">Services</a></li>
+                <li><a href="about.php">À Propos</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <label for="signin-modal" class="signin-btn">Se Connecter</label>
+                <label for="signup-modal" class="signup-btn">S'inscrire</label>
+            </div>
+                    </div>
+    </section>
+ <input type="checkbox" id="signin-modal" class="modal-toggle">
+ <div class="modal">
+     <div class="modal-content">
+         <label for="signin-modal" class="close-btn">&times;</label>
+         <h3>Formulaire de Connexion</h3>
+         <input type="email" placeholder="Email" />
+         <input type="password" placeholder="Mot de passe" />
+         <button>Se connecter</button>
+     </div>
+ </div>
+ <input type="checkbox" id="signup-modal" class="modal-toggle">
+ <div class="modal">
+     <div class="modal-content">
+         <label for="signup-modal" class="close-btn">&times;</label>
+         <h3>Formulaire d'Inscription</h3>
+         <input type="text" placeholder="Nom" />
+         <input type="email" placeholder="Email" />
+         <input type="password" placeholder="Mot de passe" />
+         <button>S'inscrire</button>
+     </div>
+ </div>
+
+    <div class="order-container">
+        <div class="form-card">
+            <h3>Place Your Order</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <span class="icon">👤</span>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <span class="icon">✉️</span>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <span class="icon">🍕</span>
+                    <select id="menu-item" name="menu-item" required>
+                        <option value="">Choose an option</option>
+                        <option value="pepperoni">Pepperoni Pizza</option>
+                        <option value="veggie">Veggie Pizza</option>
+                        <option value="margherita">Margherita Pizza</option>
+                        <option value="salmon">Salmon Pizza</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <span class="icon">#️⃣</span>
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" required min="1" value="1">
+                </div>
+                <div class="form-group">
+                    <span class="icon">📍</span>
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" required placeholder="Enter your delivery address"></textarea>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Place Order</button>
+                </div>
+                <p class="form-note">We will deliver your order as soon as possible!</p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <h1>Food<b>io</b></h1>
+            </div>
+            <div class="links">
+                <a href="Accueil.php">Accueil</a>
+                <a href="menu.php">Menu</a>
+                <a href="service.php">Services</a>
+                <a href="about.php">À Propos</a>
+                <a href="order.html">Galerie</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 Foodio. Tous droits réservés.</p>
+        </div>
+    </footer>
+    </footer>
+</body>
+</html>
